@@ -1,1 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Profile Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- FORM SECTION -->
+      <div class="card">
+        <h2>Create Job Profile</h2>
+
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+
+        <form id="jobForm">
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" id="name" required />
+            <div class="error" id="nameError">Name is required</div>
+          </div>
+
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="email" required />
+            <div class="error" id="emailError">Valid email required</div>
+          </div>
+
+          <div class="input-group">
+            <label>Job Role</label>
+            <input type="text" id="role" required />
+          </div>
+
+          <div class="input-group">
+            <label>Skills (comma separated)</label>
+            <textarea id="skills"></textarea>
+          </div>
+
+          <div class="input-group">
+            <label>Profile Photo</label>
+            <input type="file" id="photo" accept="image/*" />
+          </div>
+
+          <div class="input-group">
+            <label>Resume Upload</label>
+            <input type="file" id="resume" />
+            <div class="file-name" id="fileName"></div>
+          </div>
+
+          <button type="submit">Save Profile</button>
+        </form>
+      </div>
+
+      <!-- PROFILE SECTION -->
+      <div class="card profile-card">
+        <div class="profile-header">
+          <img
+            src="https://via.placeholder.com/110"
+            class="avatar"
+            id="avatar"
+          />
+          <h3 id="pname">Your Name</h3>
+          <p class="role" id="prole">Your Role</p>
+          <p class="email" id="pemail">Your Email</p>
+        </div>
+
+        <hr />
+
+        <div class="profile-details">
+          <h4>Skills</h4>
+          <div class="skills" id="skillContainer"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
 
