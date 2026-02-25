@@ -1,1 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProHire | Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>ProHire</h1>
+      <p>Post and manage job openings instantly.</p>
+    </header>
+
+    <div class="container">
+      <aside class="glass-panel">
+        <form id="jobForm">
+          <div class="form-group">
+            <label for="jobTitle">Job Title</label>
+            <input
+              type="text"
+              id="jobTitle"
+              placeholder="Senior Product Designer"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="companyName">Company</label>
+            <input
+              type="text"
+              id="companyName"
+              placeholder="Google / Startup Ltd"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input
+              type="text"
+              id="location"
+              placeholder="Remote, NYC, London"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">Job Description</label>
+            <textarea
+              id="description"
+              rows="4"
+              placeholder="Briefly describe the role and requirements..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" id="submitBtn">Create Listing</button>
+        </form>
+      </aside>
+
+      <main id="jobList">
+        <div class="empty-state" id="emptyState">
+          No jobs posted yet. Use the form to get started!
+        </div>
+      </main>
+    </div>
+
+    <Script src = "script.js"></Script>
+  </body>
+</html>
 
